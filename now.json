@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "routes": [
+  	{ "handle": "filesystem" },
+  	{ "src": "/", "dest": "/index.html" },
+  	{ "src": "/ajax/(.*)", "dest": "https://cdnjs.cloudflare.com/ajax/$1" },
+  	{ "src": "/gajax/(.*)", "dest": "https://ajax.googleapis.com/ajax/$1" },
+  	{ "src": "/gh/(.*)", "dest": "https://raw.githubusercontent.com/$1" },
+  	{ "src": "/avatar/(.*)", "dest": "https://secure.gravatar.com/avatar/$1" },
+  	{ "src": "/css(.*)", "dest": "https://fonts.cons.workers.dev/fonts.googleapis.com/css$1" },
+  	{ "src": "/icon(.*)", "dest": "https://fonts.cons.workers.dev/fonts.googleapis.com/icon$1" },
+  	{ "src": "/fonts.gstatic.com/(.*)", "dest": "https://fonts.cons.workers.dev/fonts.gstatic.com/$1" },
+	{ "src": "/(.{46})", "dest": "https://www.siacdn.com/$1" },
+	{ "src": "/(.{46})/(.*)", "dest": "https://www.siacdn.com/$1/$2" },
+  	{ "src": "/([a-zA-Z0-9]{6,8}).(jpg|gif|webp|webm|png|jpeg|mp4)", "dest": "https://i.imgur.com/$1.$2" },
+  	{ "src": "/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(.*)", "dest": "https://i.loli.net/$1/$2/$3/$4" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.png" }
+  ]
+}
