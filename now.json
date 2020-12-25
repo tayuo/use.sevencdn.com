@@ -3,6 +3,7 @@
   "routes": [
   	{ "handle": "filesystem" },
   	{ "src": "/", "dest": "/index.html" },
+  	{ "src": "/toots/(.*)", "dest": "https://toots.social/$1" },
   	{ "src": "/ajax/(.*)", "dest": "https://cdnjs.cloudflare.com/ajax/$1" },
   	{ "src": "/gajax/(.*)", "dest": "https://ajax.googleapis.com/ajax/$1" },
   	{ "src": "/gh/(.*)", "dest": "https://raw.githubusercontent.com/$1" },
