@@ -3,6 +3,7 @@
   "routes": [
   	{ "handle": "filesystem" },
   	{ "src": "/", "dest": "/index.html" },
+	{ "src": "/403.png", "dest": "/403.png" },
   	{ "src": "/toots/(.*)", "dest": "https://toots.social/$1" },
   	{ "src": "/ajax/(.*)", "dest": "https://cdnjs.cloudflare.com/ajax/$1" },
   	{ "src": "/gajax/(.*)", "dest": "https://ajax.googleapis.com/ajax/$1" },
@@ -13,7 +14,8 @@
   	{ "src": "/fonts.gstatic.com/(.*)", "dest": "https://fonts.cons.workers.dev/fonts.gstatic.com/$1" },
 	{ "src": "/(.{46})", "dest": "https://www.siacdn.com/$1" },
 	{ "src": "/(.{46})/(.*)", "dest": "https://www.siacdn.com/$1/$2" },
-  	{ "src": "/([a-zA-Z0-9]{6,8}).(jpg|gif|webp|webm|png|jpeg|mp4)", "dest": "https://i.imgur.com/$1.$2" },
+	{ "src": "/([a-zA-Z0-9]{6,8}).(jpg|webp|png|jpeg)", "dest": "https://i.imgur.com/$1.$2" },
+  	{ "src": "/([a-zA-Z0-9]{6,8}).(gif|webm|mp4)", "dest": "/403.png" },
   	{ "src": "/([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(.*)", "dest": "https://cdn.statically.io/img/i.loli.net/$1/$2/$3/$4" },
   	{ "src": "/(.*)", "status": 404, "dest": "/404.png" }
   ]
